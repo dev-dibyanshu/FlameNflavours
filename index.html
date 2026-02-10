@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame & Flavour - Where Flavour Meets Fire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Flame & Flavour</h1>
+            </div>
+            <nav class="nav">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Flame & Flavour</h1>
+            <p class="hero-tagline">Where Flavour Meets Fire</p>
+            <a href="#menu" class="cta-btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <p class="about-text">
+                At Flame & Flavour, we bring you the finest grilled delicacies and authentic Indian cuisine. 
+                Every dish is crafted with passion, grilled to perfection, and served with love. 
+                Experience the perfect blend of traditional flavors and modern culinary techniques.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="burgers">Burgers</button>
+                <button class="filter-btn" data-category="combos">Combo Meals</button>
+                <button class="filter-btn" data-category="wraps">Wraps</button>
+                <button class="filter-btn" data-category="snacks">Snacks</button>
+                <button class="filter-btn" data-category="biryani">Biryani</button>
+                <button class="filter-btn" data-category="starters">Starters</button>
+                <button class="filter-btn" data-category="mains">Main Course</button>
+                <button class="filter-btn" data-category="mutton">Mutton</button>
+                <button class="filter-btn" data-category="breads">Breads</button>
+                <button class="filter-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flame & Flavour</h3>
+                    <p>Where Flavour Meets Fire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 7505334931</p>
+                    <p>📍 Your City, India</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p>📷 @flame_nd_flavour</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Flame & Flavour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Place Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917505334931" class="whatsapp-float" target="_blank">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.488 2.031 7.794L0 32l8.394-2.031C10.7 31.262 13.363 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.544 0-4.944-.706-6.981-1.931l-.5-.294-5.181 1.256 1.256-5.181-.294-.5C2.706 20.944 2 18.544 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 13.333-14 13.333zm7.331-9.831c-.4-.2-2.369-1.169-2.738-1.3-.369-.131-.637-.2-.906.2-.269.4-1.038 1.3-1.275 1.569-.237.269-.475.3-.875.1-.4-.2-1.688-.619-3.213-1.975-1.188-1.056-1.988-2.363-2.219-2.763-.231-.4-.025-.619.175-.819.181-.181.4-.475.6-.713.2-.237.269-.4.4-.669.131-.269.069-.5-.031-.7-.1-.2-.906-2.181-1.244-2.988-.331-.788-.662-.681-.906-.694-.237-.012-.506-.012-.775-.012s-.712.1-1.081.5c-.369.4-1.406 1.375-1.406 3.356s1.438 3.894 1.638 4.163c.2.269 2.825 4.313 6.844 6.05.956.413 1.7.656 2.281.844.956.3 1.825.256 2.513.156.769-.113 2.369-.969 2.7-1.906.331-.938.331-1.738.231-1.906-.1-.169-.369-.269-.769-.469z"/>
+        </svg>
+    </a>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-header">
+            <h3>Complete Your Order</h3>
+            <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="checkout-modal-body">
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="customerName">Name *</label>
+                    <input type="text" id="customerName" class="form-input" placeholder="Enter your name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerAddress">Delivery Address *</label>
+                    <textarea id="customerAddress" class="form-input" rows="3" placeholder="Enter your complete address" required></textarea>
+                    <span class="error-message" id="addressError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerNote">Special Instructions (Optional)</label>
+                    <textarea id="customerNote" class="form-input" rows="2" placeholder="Any special requests or instructions"></textarea>
+                </div>
+                
+                <button type="submit" class="confirm-order-btn" id="confirmOrderBtn" disabled>
+                    Confirm Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="menu-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
