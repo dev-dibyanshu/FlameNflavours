@@ -6,7 +6,7 @@
     <title>Flame & Flavour - Where Flavour Meets Fire</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,10 +23,10 @@
                 <a href="#contact">Contact</a>
             </nav>
             <button class="cart-btn" id="cartBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
                 </svg>
                 <span class="cart-count" id="cartCount">0</span>
             </button>
@@ -35,11 +35,53 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
+            <p class="hero-micro-headline">Premium Grilled Kitchen</p>
             <h1 class="hero-title">Flame & Flavour</h1>
             <p class="hero-tagline">Where Flavour Meets Fire</p>
             <a href="#menu" class="cta-btn">View Menu</a>
+        </div>
+        
+        <!-- Hero Badges -->
+        <div class="hero-badges">
+            <div class="hero-badge">
+                <span>⭐</span>
+                <span>4.8 Rating</span>
+            </div>
+            <div class="hero-badge">
+                <span>⚡</span>
+                <span>Fast Delivery</span>
+            </div>
+            <div class="hero-badge">
+                <span>🔥</span>
+                <span>Freshly Grilled</span>
+            </div>
+            <div class="hero-badge">
+                <span>🕒</span>
+                <span>Open Late</span>
+            </div>
+        </div>
+        
+        <!-- Featured Dishes -->
+        <div class="hero-featured">
+            <div class="hero-featured-title">Popular Today</div>
+            <div class="hero-featured-items">
+                <div class="hero-featured-item">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300" alt="Zinger Burger">
+                    <div class="hero-featured-item-name">Zinger Crunch</div>
+                    <div class="hero-featured-item-price">₹119</div>
+                </div>
+                <div class="hero-featured-item">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=300" alt="Biryani">
+                    <div class="hero-featured-item-name">Hyderabadi Biryani</div>
+                    <div class="hero-featured-item-price">₹149</div>
+                </div>
+                <div class="hero-featured-item">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=300" alt="Tikka">
+                    <div class="hero-featured-item-name">Malai Tikka</div>
+                    <div class="hero-featured-item-price">₹179</div>
+                </div>
+            </div>
         </div>
     </section>
 
